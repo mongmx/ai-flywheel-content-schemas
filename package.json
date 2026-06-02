@@ -1,0 +1,26 @@
+{
+  "name": "@mongmx/ai-flywheel-content-schemas",
+  "version": "0.1.0",
+  "description": "Shared content schemas for the AI Flywheel publishing system.",
+  "type": "module",
+  "files": [
+    "schemas",
+    "examples",
+    "README.md"
+  ],
+  "exports": {
+    "./ebook-layout.v1": "./schemas/ebook-layout.v1.schema.json",
+    "./slides-layout.v1": "./schemas/slides-layout.v1.schema.json",
+    "./schemas/ebook-layout.v1.schema.json": "./schemas/ebook-layout.v1.schema.json",
+    "./schemas/slides-layout.v1.schema.json": "./schemas/slides-layout.v1.schema.json"
+  },
+  "keywords": [
+    "ai-flywheel",
+    "json-schema",
+    "publishing",
+    "ebook",
+    "slides",
+    "typst"
+  ],
+  "license": "Apache-2.0"
+}
