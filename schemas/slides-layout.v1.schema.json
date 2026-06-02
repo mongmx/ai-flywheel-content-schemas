@@ -224,7 +224,6 @@
         },
         "background_image_url": {
           "type": "string",
-          "format": "uri",
           "pattern": "^https://",
           "minLength": 1
         }
