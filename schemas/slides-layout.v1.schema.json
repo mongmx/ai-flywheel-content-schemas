@@ -226,6 +226,48 @@
           "type": "string",
           "pattern": "^https://",
           "minLength": 1
+        },
+        "text_position": {
+          "enum": [
+            "top_left",
+            "top_center",
+            "top_right",
+            "center_left",
+            "center",
+            "center_right",
+            "bottom_left",
+            "bottom_center",
+            "bottom_right"
+          ],
+          "default": "bottom_left"
+        },
+        "brand_position": {
+          "enum": [
+            "top_left",
+            "top_center",
+            "top_right",
+            "center_left",
+            "center",
+            "center_right",
+            "bottom_left",
+            "bottom_center",
+            "bottom_right"
+          ],
+          "default": "top_left"
+        },
+        "footer_position": {
+          "enum": [
+            "top_left",
+            "top_center",
+            "top_right",
+            "center_left",
+            "center",
+            "center_right",
+            "bottom_left",
+            "bottom_center",
+            "bottom_right"
+          ],
+          "default": "bottom_right"
         }
       },
       "anyOf": [

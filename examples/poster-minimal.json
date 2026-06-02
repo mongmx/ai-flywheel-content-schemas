@@ -21,7 +21,10 @@
       "subtitle": "สุดท้ายมันก็มีวันที่ต้องดับ",
       "footer": "iKL Studio",
       "overlay": 58,
-      "background_image_url": "https://example.com/bg-poster-01.jpg"
+      "background_image_url": "https://example.com/bg-poster-01.jpg",
+      "text_position": "bottom_left",
+      "brand_position": "top_left",
+      "footer_position": "bottom_right"
     }
   ],
   "output": {
