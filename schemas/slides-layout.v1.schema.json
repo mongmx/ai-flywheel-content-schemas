@@ -183,7 +183,6 @@
       "required": [
         "type",
         "title",
-        "background_image",
         "quote"
       ],
       "properties": {
@@ -222,8 +221,26 @@
           "minimum": 0,
           "maximum": 100,
           "default": 62
+        },
+        "background_image_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "minLength": 1
         }
-      }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "background_image"
+          ]
+        },
+        {
+          "required": [
+            "background_image_url"
+          ]
+        }
+      ]
     },
     "headlineListSlide": {
       "type": "object",
