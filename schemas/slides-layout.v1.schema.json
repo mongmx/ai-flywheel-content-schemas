@@ -5,7 +5,13 @@
   "description": "Contract between an upstream content agent and the Typst slide layout engine.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "document_type", "deck", "layout", "slides"],
+  "required": [
+    "schema_version",
+    "document_type",
+    "deck",
+    "layout",
+    "slides"
+  ],
   "properties": {
     "schema_version": {
       "const": "slides-layout.v1"
@@ -25,13 +31,18 @@
       "items": {
         "$ref": "#/$defs/slide"
       }
+    },
+    "output": {
+      "$ref": "#/$defs/outputOptions"
     }
   },
   "$defs": {
     "deck": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["title"],
+      "required": [
+        "title"
+      ],
       "properties": {
         "title": {
           "type": "string",
@@ -48,7 +59,11 @@
     "layoutOptions": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["template", "theme", "page_size"],
+      "required": [
+        "template",
+        "theme",
+        "page_size"
+      ],
       "properties": {
         "template": {
           "type": "string",
@@ -59,7 +74,9 @@
           "default": "quiet-power"
         },
         "page_size": {
-          "enum": ["16:9"]
+          "enum": [
+            "16:9"
+          ]
         },
         "width": {
           "type": "string",
@@ -113,7 +130,10 @@
     },
     "baseSlide": {
       "type": "object",
-      "required": ["type", "title"],
+      "required": [
+        "type",
+        "title"
+      ],
       "properties": {
         "type": {
           "type": "string"
@@ -132,7 +152,10 @@
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["type", "title"],
+          "required": [
+            "type",
+            "title"
+          ],
           "properties": {
             "type": {
               "const": "hero"
@@ -157,7 +180,12 @@
     "posterSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "background_image", "quote"],
+      "required": [
+        "type",
+        "title",
+        "background_image",
+        "quote"
+      ],
       "properties": {
         "type": {
           "const": "poster"
@@ -200,10 +228,18 @@
     "headlineListSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "headline", "items"],
+      "required": [
+        "type",
+        "title",
+        "headline",
+        "items"
+      ],
       "properties": {
         "type": {
-          "enum": ["problem", "why"]
+          "enum": [
+            "problem",
+            "why"
+          ]
         },
         "title": {
           "type": "string",
@@ -221,7 +257,11 @@
     "shiftSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "columns"],
+      "required": [
+        "type",
+        "title",
+        "columns"
+      ],
       "properties": {
         "type": {
           "const": "shift"
@@ -243,7 +283,12 @@
     "definitionSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "statement", "items"],
+      "required": [
+        "type",
+        "title",
+        "statement",
+        "items"
+      ],
       "properties": {
         "type": {
           "const": "definition"
@@ -264,7 +309,11 @@
     "architectureSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "steps"],
+      "required": [
+        "type",
+        "title",
+        "steps"
+      ],
       "properties": {
         "type": {
           "const": "architecture"
@@ -284,7 +333,11 @@
     "pipelineSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "steps"],
+      "required": [
+        "type",
+        "title",
+        "steps"
+      ],
       "properties": {
         "type": {
           "const": "pipeline"
@@ -301,7 +354,11 @@
     "evolutionSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "timeline"],
+      "required": [
+        "type",
+        "title",
+        "timeline"
+      ],
       "properties": {
         "type": {
           "const": "evolution"
@@ -316,7 +373,10 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["stage", "description"],
+            "required": [
+              "stage",
+              "description"
+            ],
             "properties": {
               "stage": {
                 "type": "string",
@@ -334,7 +394,12 @@
     "factorySlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "mapping", "statement"],
+      "required": [
+        "type",
+        "title",
+        "mapping",
+        "statement"
+      ],
       "properties": {
         "type": {
           "const": "factory"
@@ -349,7 +414,10 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["concept", "role"],
+            "required": [
+              "concept",
+              "role"
+            ],
             "properties": {
               "concept": {
                 "type": "string",
@@ -371,7 +439,11 @@
     "useCasesSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "items"],
+      "required": [
+        "type",
+        "title",
+        "items"
+      ],
       "properties": {
         "type": {
           "const": "use_cases"
@@ -388,7 +460,11 @@
     "visionSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "statement"],
+      "required": [
+        "type",
+        "title",
+        "statement"
+      ],
       "properties": {
         "type": {
           "const": "vision"
@@ -409,7 +485,13 @@
     "closingSlide": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["type", "title", "subtitle", "cta", "url"],
+      "required": [
+        "type",
+        "title",
+        "subtitle",
+        "cta",
+        "url"
+      ],
       "properties": {
         "type": {
           "const": "closing"
@@ -435,7 +517,10 @@
     "labeledList": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["label", "items"],
+      "required": [
+        "label",
+        "items"
+      ],
       "properties": {
         "label": {
           "type": "string",
@@ -453,6 +538,29 @@
         "type": "string",
         "minLength": 1
       }
+    },
+    "outputOptions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "width_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "dpi": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 144
+        }
+      },
+      "required": [
+        "width_px",
+        "height_px"
+      ]
     }
   }
 }
